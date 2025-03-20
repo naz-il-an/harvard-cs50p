@@ -17,17 +17,17 @@ def is_valid(s):
     for i in s:
         if i.isdigit():
             digits.append(i)
-    if digits[0] == '0':
-        return False
+            if digits[0] == '0':
+                return False
     if  len(s) > 6 or len(s) < 2:
-        return False    
+        return False
     elif s[0].isdigit() or s[1].isdigit():
         return False
     elif s.isalpha():
         return True
     elif s[-1].isalpha():
-        return False    
+        return False
     else:
-        return True    
+        return True 
     
 main()
